@@ -1,0 +1,23 @@
+[package]
+name         = "hyp"
+description  = ".hyp (HYPV1) 아카이브 읽기·쓰기. HY Project 게임 배포 형식."
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[dependencies]
+liblzma    = { workspace = true }
+serde      = { workspace = true }
+serde_json = { workspace = true }
+sha2       = { workspace = true }
+hex        = { workspace = true }
+
+[dev-dependencies]
+tempfile = "=3.24.0"
+# 악의적으로 만들어진 아카이브를 손으로 조립해 보려면 압축기가 필요하다.
+liblzma    = { workspace = true }
+serde_json = { workspace = true }
+sha2       = { workspace = true }
+hex        = { workspace = true }

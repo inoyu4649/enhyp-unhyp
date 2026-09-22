@@ -1,0 +1,15 @@
+[package]
+name        = "enhyp"
+description = "디렉터리를 .hyp 아카이브로 압축한다."
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[[bin]]
+name = "enhyp"
+path = "src/main.rs"
+
+[dependencies]
+hyp = { workspace = true }

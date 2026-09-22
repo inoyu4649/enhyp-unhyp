@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = ["hyp", "enhyp", "unhyp"]
+
+[workspace.package]
+version      = "0.1.0"
+edition      = "2021"
+rust-version = "1.77.2"
+license      = "UNLICENSED"
+repository   = "https://github.com/inoyu4649/enhyp-unhyp"
+
+[workspace.dependencies]
+hyp        = { path = "hyp", version = "0.1.0" }
+liblzma    = { version = "=0.4.4", features = ["static"] }
+serde      = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+sha2       = "=0.10.9"
+hex        = "=0.4.3"
+
+# 릴리스 빌드는 CLI와 라이브러리 양쪽에서 압축 해제 속도가 곧 설치 시간이다.
+[profile.release]
+opt-level = 3
+lto       = true
+strip     = true

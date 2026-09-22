@@ -1,0 +1,15 @@
+[package]
+name        = "unhyp"
+description = ".hyp 아카이브를 푼다."
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+
+[[bin]]
+name = "unhyp"
+path = "src/main.rs"
+
+[dependencies]
+hyp = { workspace = true }
