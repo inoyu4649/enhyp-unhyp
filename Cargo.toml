@@ -3,14 +3,14 @@ resolver = "2"
 members = ["hyp", "enhyp", "unhyp"]
 
 [workspace.package]
-version      = "0.1.0"
+version      = "0.1.1"
 edition      = "2021"
 rust-version = "1.77.2"
-license      = "UNLICENSED"
+license      = "MIT"
 repository   = "https://github.com/inoyu4649/enhyp-unhyp"
 
 [workspace.dependencies]
-hyp        = { path = "hyp", version = "0.1.0" }
+hyp        = { path = "hyp", version = "0.1.1" }
 liblzma    = { version = "=0.4.4", features = ["static"] }
 serde      = { version = "=1.0.229", features = ["derive"] }
 serde_json = "=1.0.151"

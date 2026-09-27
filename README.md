@@ -29,19 +29,12 @@ cargo build --release
 
 ## 라이브러리로 쓰기
 
-비공개 저장소이므로 git 의존성에 인증이 필요하다. `.cargo/config.toml`에:
-
-```toml
-[net]
-git-fetch-with-cli = true
-```
-
 `Cargo.toml`에서는 **브랜치가 아니라 tag나 rev로 고정한다.** 브랜치를 가리키면
 런처를 다시 빌드할 때마다 아카이브 형식이 소리 없이 바뀔 수 있다.
 
 ```toml
 [dependencies]
-hyp = { git = "ssh://git@github.com/inoyu4649/enhyp-unhyp.git", tag = "v0.1.0" }
+hyp = { git = "https://github.com/inoyu4649/enhyp-unhyp", tag = "v0.1.1" }
 ```
 
 ```rust
@@ -54,7 +47,8 @@ hyp::extract(&archive, &dest, |done, total| {
 
 `HYPV1` 매직 넘버의 목적은 **탐색기에서 더블클릭했을 때 7-Zip이 열어서
 내용물이 드러나는 상황을 막는 것**뿐이다. 형식을 아는 사람은 누구나 풀 수
-있고, 그래도 된다. 이 저장소가 비공개인 것도 방어책이 아니라 그냥 정리다.
+있고, 그래도 된다. 그래서 이 저장소는 공개다(2026-09-27부터) — HYEngine(MIT)이 `.hyp` 묶기를
+이 라이브러리로 직접 한다.
 
 ## 테스트
 
@@ -66,3 +60,7 @@ cargo test --workspace
 장치명, 위조된 체크섬이 든 아카이브를 **손으로 조립해서** 거부되는지, 그리고
 대상 디렉터리 바깥에 아무것도 생기지 않는지 본다. `pack()`은 같은 검사를
 통과하지 못해 이런 파일을 만들어 주지 않으므로, 손으로 만드는 수밖에 없다.
+
+## 라이선스
+
+MIT — `LICENSE`. HYEngine(MIT)과 같다.
