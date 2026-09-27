@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
--------------------------------------------------------------------------------
-This license covers the HYEngine source code only. The following are NOT
-covered by the MIT License:
-
-  - assets/brand/ (HYEngine logo)          -> see LOGO_NOTICE.md
-  - packages/tiles/ (bundled default tiles) -> CC BY 4.0, see packages/tiles/LICENSE
-  - packages/theme-hyhs/ (easter-egg theme) -> see packages/theme-hyhs/NOTICE.md
